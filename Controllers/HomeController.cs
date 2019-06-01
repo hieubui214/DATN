@@ -8,11 +8,12 @@ namespace Discuss.Controllers
 {
     public class HomeController : Controller
     {
-        public int pageSize = 2;
+        public int pageSize = 5;
 
-        [Route("dat-cau-hoi")]
+        [Route("dat-cau-hoi")] //Viết lại URL cho đẹp
         public ActionResult CreateAsk()
         {
+            //Kết nối đến CSDL để lấy dữ liệu
             DBM.GetList("sp_Category_GetAll", new { }, out List<CategoryModel> categoryModels);
             return View(categoryModels);
         }
