@@ -11,7 +11,7 @@ Target Server Type    : SQL Server
 Target Server Version : 140000
 File Encoding         : 65001
 
-Date: 2019-06-01 16:38:13
+Date: 2019-05-31 23:30:34
 */
 
 
@@ -33,7 +33,7 @@ CREATE TABLE [dbo].[Answer] (
 
 
 GO
-DBCC CHECKIDENT(N'[dbo].[Answer]', RESEED, 26)
+DBCC CHECKIDENT(N'[dbo].[Answer]', RESEED, 24)
 GO
 
 -- ----------------------------
@@ -44,7 +44,7 @@ GO
 INSERT INTO [dbo].[Answer] ([AnswerId], [AnswerContent], [AskId], [UserId], [CountVote], [DateCreated], [Status], [IsConfirm]) VALUES (N'1', N'<p>Bạn tìm số mol của muối rồi suy ra khối lượng anilin</p>', N'2', N'3', N'1', N'2019-05-29 15:18:37.1300000', N'1', N'0')
 GO
 GO
-INSERT INTO [dbo].[Answer] ([AnswerId], [AnswerContent], [AskId], [UserId], [CountVote], [DateCreated], [Status], [IsConfirm]) VALUES (N'2', N'<p>Gọi T = \(\dfrac{n_{OH^-}}{n_{CO2}}=\dfrac{0,5+0,5\times0,02\times2}{0,5}=\dfrac{0,52}{0,5}=1,04\)</p> <p>Có 1<T<2 => Tạo 2 muối </p> <p>CO2 + 2OH\(^-\) ==-> \(CO^{2-}_3\) + H2O</p> <p>CO2 + OH\(^-\) ==--> HC\(O_3^-\)</p> <p>Lập hệ phương trình: => n\(_{CO3^{2-}}\) = n\(CO2_{\left(1\right)}\) = 0,02 (mol) </p> <p>n\(_{Ba^{2+}}\) = 0,01 ( mol) => m\(_{BaCO_3}\) = 0,01\(\times\) 197 = 1,97 (g)</p>', N'2', N'3', N'1', N'2019-05-29 15:18:37.1300000', N'1', N'0')
+INSERT INTO [dbo].[Answer] ([AnswerId], [AnswerContent], [AskId], [UserId], [CountVote], [DateCreated], [Status], [IsConfirm]) VALUES (N'2', N'<p>Gọi T = \(\dfrac{n_{OH^-}}{n_{CO2}}=\dfrac{0,5+0,5\times0,02\times2}{0,5}=\dfrac{0,52}{0,5}=1,04\)</p> <p>Có 1<T<2 => Tạo 2 muối </p> <p>CO2 + 2OH\(^-\) ==-> \(CO^{2-}_3\) + H2O</p> <p>CO2 + OH\(^-\) ==--> HC\(O_3^-\)</p> <p>Lập hệ phương trình: => n\(_{CO3^{2-}}\) = n\(CO2_{\left(1\right)}\) = 0,02 (mol) </p> <p>n\(_{Ba^{2+}}\) = 0,01 ( mol) => m\(_{BaCO_3}\) = 0,01\(\times\) 197 = 1,97 (g)</p>', N'2', N'3', N'1', N'2019-05-29 15:18:37.1300000', N'1', N'1')
 GO
 GO
 INSERT INTO [dbo].[Answer] ([AnswerId], [AnswerContent], [AskId], [UserId], [CountVote], [DateCreated], [Status], [IsConfirm]) VALUES (N'3', N'<p>\(n_{CuSO_4}=n_{CuSO_4.5H_2O}=\dfrac{5}{250}=0,02mol\)</p> <p>Zn+CuSO4\(\rightarrow\)ZnSO4+Cu</p> <p>\(n_{Cu}=n_{CuSO_4}=0,02mol\)</p> <p>mCu=0,02.64=1,28 gam</p>', N'3', N'3', N'1', N'2019-05-29 15:18:37.1300000', N'1', N'0')
@@ -113,12 +113,6 @@ GO
 INSERT INTO [dbo].[Answer] ([AnswerId], [AnswerContent], [AskId], [UserId], [CountVote], [DateCreated], [Status], [IsConfirm]) VALUES (N'24', N'<p>fdfdfdf</p>', N'2', N'3', N'0', N'2019-05-31 16:09:59.7670000', N'1', N'0')
 GO
 GO
-INSERT INTO [dbo].[Answer] ([AnswerId], [AnswerContent], [AskId], [UserId], [CountVote], [DateCreated], [Status], [IsConfirm]) VALUES (N'25', N'<p>Câu trả lời thứ 1</p>', N'29', N'4', N'0', N'2019-06-01 16:20:26.3300000', N'1', N'0')
-GO
-GO
-INSERT INTO [dbo].[Answer] ([AnswerId], [AnswerContent], [AskId], [UserId], [CountVote], [DateCreated], [Status], [IsConfirm]) VALUES (N'26', N'<p>fbsdbfhdsbfhsdfsdfsdfsdf</p>', N'29', N'4', N'0', N'2019-06-01 16:21:07.1770000', N'1', N'0')
-GO
-GO
 SET IDENTITY_INSERT [dbo].[Answer] OFF
 GO
 
@@ -167,7 +161,7 @@ CREATE TABLE [dbo].[Ask] (
 
 
 GO
-DBCC CHECKIDENT(N'[dbo].[Ask]', RESEED, 29)
+DBCC CHECKIDENT(N'[dbo].[Ask]', RESEED, 28)
 GO
 
 -- ----------------------------
@@ -254,9 +248,6 @@ INSERT INTO [dbo].[Ask] ([AskId], [Content], [CategoryId], [UserId], [CountLike]
 GO
 GO
 INSERT INTO [dbo].[Ask] ([AskId], [Content], [CategoryId], [UserId], [CountLike], [CountAnswer], [Coin], [SlugUrl], [DateCreated], [Status]) VALUES (N'28', N'<p>dsdsdsdsdsd</p>', N'1', N'3', N'0', N'0', N'0', N'p-dsdsdsdsdsd-p', N'2019-05-31 02:10:32.900', N'1')
-GO
-GO
-INSERT INTO [dbo].[Ask] ([AskId], [Content], [CategoryId], [UserId], [CountLike], [CountAnswer], [Coin], [SlugUrl], [DateCreated], [Status]) VALUES (N'29', N'<p>Đây là câu hỏi Toán 12&nbsp;<span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;">Đây là câu hỏi Toán 12&nbsp;</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;">Đây là câu hỏi Toán 12&nbsp;</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;">Đây là câu hỏi Toán 12&nbsp;</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;">Đây là câu hỏi Toán 12&nbsp;</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;">Đây là câu hỏi Toán 12&nbsp;</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;">Đây là câfdfdfdfdfu hỏi Toán 12&nbsp;</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica', N'3', N'4', N'0', N'0', N'0', N'p-day-la-cau-hoi-toan-12-nbsp-span-style-font-family-apple-system-blinkmacsystemfont-quot-se', N'2019-06-01 16:16:27.673', N'1')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[Ask] OFF
@@ -403,7 +394,7 @@ CREATE TABLE [dbo].[User] (
 
 
 GO
-DBCC CHECKIDENT(N'[dbo].[User]', RESEED, 4)
+DBCC CHECKIDENT(N'[dbo].[User]', RESEED, 3)
 GO
 
 -- ----------------------------
@@ -418,9 +409,6 @@ INSERT INTO [dbo].[User] ([UserId], [UserName], [PasswordHash], [FullName], [Ema
 GO
 GO
 INSERT INTO [dbo].[User] ([UserId], [UserName], [PasswordHash], [FullName], [Email], [Phone], [DateCreated], [Experience], [Coin], [RoleId], [Avatar], [Status]) VALUES (N'3', N'admin', N'4297f44b13955235245b2497399d7a93', N'Quản trị viên', N'admin12@gmail.com', N'0966899888', null, null, null, N'2', null, N'1')
-GO
-GO
-INSERT INTO [dbo].[User] ([UserId], [UserName], [PasswordHash], [FullName], [Email], [Phone], [DateCreated], [Experience], [Coin], [RoleId], [Avatar], [Status]) VALUES (N'4', N'buihieu', N'4297f44b13955235245b2497399d7a93', N'Bùi Đức Hiếu', N'hieubui@gmail.com', N'0966888999', null, null, null, N'2', null, N'1')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[User] OFF
@@ -441,16 +429,16 @@ BEGIN
 		BEGIN
 			IF EXISTS(SELECT 1 FROM Answer WHERE AnswerId=@AnswerId AND IsConfirm=0)
 				BEGIN
-					SELECT 1 -- Câu hỏi của người đang đăng nhập và chưa được xác nhận
+					SELECT 1
 				END
 			ELSE
 				BEGIN
-					SELECT 0 -- Câu hỏi của người đang đăng nhập và đã được xác nhận
+					SELECT 0
 				END
 		END
 	ELSE
 		BEGIN
-			SELECT 2 -- Câu hỏi không phải của của người đang đăng nhập
+			SELECT 0
 		END
 END
 

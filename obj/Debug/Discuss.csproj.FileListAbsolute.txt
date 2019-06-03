@@ -99,3 +99,4 @@ H:\Discuss\bin\roslyn\vbc.exe
 H:\Discuss\bin\roslyn\vbc.exe.config
 H:\Discuss\bin\roslyn\vbc.rsp
 H:\Discuss\bin\roslyn\VBCSCompiler.exe.config
+H:\Discuss\obj\Debug\Discuss.csprojAssemblyReference.cache

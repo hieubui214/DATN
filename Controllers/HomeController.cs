@@ -64,15 +64,22 @@ namespace Discuss.Controllers
             };
             return View("Index", pagination);
         }
-
+        /// <summary>
+        /// Trang chủ.
+        /// Route là viết lại đường dẫn
+        /// alias? thì dấu ? được hiểu là: có cũng được, không có cũng đuọcư
+        /// </summary>
+        /// <param name="alias"></param>
+        /// <returns></returns>
         [Route("{alias?}")]
         public ActionResult Index(string alias)
         {
             int categoryId = 0;
-            if (!string.IsNullOrEmpty(alias))
+            if (!string.IsNullOrEmpty(alias))//Trả về true khi alias rỗng
             {
                 DBM.GetOne("sp_Category_FillByAlias", new { Alias = alias }, out CategoryModel categoryModel);
-                categoryId = categoryModel.CategoryId;
+                if (categoryModel != null)
+                    categoryId = categoryModel.CategoryId;
             }
 
             DBM.ExecStore("sp_Ask_Count", new { CategoryId = categoryId }, out int totalRow);
